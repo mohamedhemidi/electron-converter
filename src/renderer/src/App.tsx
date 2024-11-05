@@ -10,7 +10,8 @@ function App(): JSX.Element {
     e.preventDefault()
     window.electron.ipcRenderer.send('convert-length-request', { feets, inches })
 
-    const handleResponse = (results): void => {
+    const handleResponse = (event, results): void => {
+      console.log(event)
       setResult(results)
     }
     window.electron.ipcRenderer.on('convert-length-response', handleResponse)
@@ -27,7 +28,7 @@ function App(): JSX.Element {
       <form className="convert_form">
         <div className="form_group">
           <input
-            type="text"
+            type="number"
             name="feets"
             value={feets}
             className="textInput"
@@ -37,7 +38,7 @@ function App(): JSX.Element {
         </div>
         <div className="form_group">
           <input
-            type="text"
+            type="number"
             name="inches"
             value={inches}
             className="textInput"
@@ -52,7 +53,7 @@ function App(): JSX.Element {
       </form>
       <div className="result">
         <h3>{result !== null ? result : 0}</h3>
-        <span className="result_unit">CM</span>
+        <span className="result_unit">M</span>
       </div>
     </div>
   )

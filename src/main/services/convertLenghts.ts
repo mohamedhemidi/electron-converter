@@ -1,8 +1,8 @@
 const ConvertLength = async (event, measures): Promise<void> => {
-  const feets = measures.feets
-  const inches = measures.inches
-  const results = feets * 30.48 + inches * 2.54
-  await event.reply('convert-length-response', results)
+  const feetsToMeters = measures.feets * 0.3048
+  const inchesToMeters = measures.inches * 0.0254
+  const results = feetsToMeters + inchesToMeters
+  await event.reply('convert-length-response', parseFloat(results).toFixed(4))
 }
 
 export default ConvertLength
