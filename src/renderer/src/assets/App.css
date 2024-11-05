@@ -1,0 +1,87 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.textInput {
+  width: 15rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+}
+.convert_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.convert_form button {
+  background: #84fbc4;
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.convert_form button:hover {
+  background: #05a95c;
+}
+.form_group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.unit {
+  border: 1px solid #ececec;
+  padding: 0.5rem 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.result {
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.result h3 {
+  width: 75%;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+.result_unit {
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.action_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.action_buttons button:nth-of-type(1) {
+  width: 10rem;
+}
+.action_buttons button:nth-of-type(2) {
+  background: #ececec;
+}
